@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{29C9F40C-95DD-1CBE-5E5F-C01DCA3219EF}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Cetus</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\bin\Debug-windows-x86_64\Cetus\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\Cetus\</IntDir>
+    <TargetName>Cetus</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\bin\Release-windows-x86_64\Cetus\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\Cetus\</IntDir>
+    <TargetName>Cetus</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WL_PLATFORM_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\vendor;..\vendor\imgui;..\vendor\glfw;..\vendor\ktx\include;..\vendor\ktx\lib;..\vendor\ktx\other_include;..\vendor\stb;..\vendor\tiny_obj_loader;..\vendor\tinygltf;D:\Vulkan\Include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>vulkan-1.lib;glfw3.lib;ImGui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\vendor\glfw\lib;..\vendor\imgui\bin;D:\Vulkan\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>WL_PLATFORM_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\vendor;..\vendor\imgui;..\vendor\glfw;..\vendor\ktx\include;..\vendor\ktx\lib;..\vendor\ktx\other_include;..\vendor\stb;..\vendor\tiny_obj_loader;..\vendor\tinygltf;D:\Vulkan\Include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>vulkan-1.lib;glfw3.lib;ImGui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\vendor\glfw\lib;..\vendor\imgui\bin;D:\Vulkan\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\base\CommandLineParser.hpp" />
+    <ClInclude Include="src\base\VulkanBuffer.h" />
+    <ClInclude Include="src\base\VulkanDebug.h" />
+    <ClInclude Include="src\base\VulkanDevice.h" />
+    <ClInclude Include="src\base\VulkanFrameBuffer.hpp" />
+    <ClInclude Include="src\base\VulkanInitializers.hpp" />
+    <ClInclude Include="src\base\VulkanSwapChain.h" />
+    <ClInclude Include="src\base\VulkanTexture.h" />
+    <ClInclude Include="src\base\VulkanTools.h" />
+    <ClInclude Include="src\base\VulkanUIOverlay.h" />
+    <ClInclude Include="src\base\VulkanglTFModel.h" />
+    <ClInclude Include="src\base\benchmark.hpp" />
+    <ClInclude Include="src\base\camera.hpp" />
+    <ClInclude Include="src\base\frustum.hpp" />
+    <ClInclude Include="src\base\keycodes.hpp" />
+    <ClInclude Include="src\base\threadpool.hpp" />
+    <ClInclude Include="src\base\vulkanexamplebase.h" />
+    <ClInclude Include="src\base\test\VulkanBase.h" />
+    <ClInclude Include="src\Cetus\Application.h" />
+    <ClInclude Include="src\Cetus\EntryPoint.h" />
+    <ClInclude Include="src\Cetus\Image.h" />
+    <ClInclude Include="src\Cetus\ImGui\imgui_impl_vulkan.h" />
+    <ClInclude Include="src\Cetus\Input\Input.h" />
+    <ClInclude Include="src\Cetus\Input\KeyCodes.h" />
+    <ClInclude Include="src\Cetus\Layer.h" />
+    <ClInclude Include="src\Cetus\Random.h" />
+    <ClInclude Include="src\Cetus\Timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\base\ktx\checkheader.c" />
+    <ClCompile Include="src\base\ktx\filestream.c" />
+    <ClCompile Include="src\base\ktx\hashlist.c" />
+    <ClCompile Include="src\base\ktx\memstream.c" />
+    <ClCompile Include="src\base\ktx\swap.c" />
+    <ClCompile Include="src\base\ktx\texture.c" />
+    <ClCompile Include="src\base\VulkanBuffer.cpp" />
+    <ClCompile Include="src\base\VulkanDebug.cpp" />
+    <ClCompile Include="src\base\VulkanDevice.cpp" />
+    <ClCompile Include="src\base\VulkanSwapChain.cpp" />
+    <ClCompile Include="src\base\VulkanTexture.cpp" />
+    <ClCompile Include="src\base\VulkanTools.cpp" />
+    <ClCompile Include="src\base\VulkanUIOverlay.cpp" />
+    <ClCompile Include="src\base\VulkanglTFModel.cpp" />
+    <ClCompile Include="src\base\vulkanexamplebase.cpp" />
+    <ClCompile Include="src\base\test\VulkanBase.cpp" />
+    <ClCompile Include="src\Cetus\Application.cpp" />
+    <ClCompile Include="src\Cetus\Image.cpp" />
+    <ClCompile Include="src\Cetus\ImGui\ImGuiBuild.cpp" />
+    <ClCompile Include="src\Cetus\ImGui\imgui_impl_vulkan.cpp" />
+    <ClCompile Include="src\Cetus\Input\Input.cpp" />
+    <ClCompile Include="src\Cetus\Random.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

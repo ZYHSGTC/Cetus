@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Cetus">
+      <UniqueIdentifier>{29C9F40C-95DD-1CBE-5E5F-C01DCA3219EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cetus\ImGui">
+      <UniqueIdentifier>{13B9C334-7F6E-3C2A-0863-36017417332E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cetus\Input">
+      <UniqueIdentifier>{E8F3C434-54A9-3D2A-DD9D-37014952342E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{8078947C-6CAF-950D-159C-7B1001B2110F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\base\CommandLineParser.hpp">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\VulkanBuffer.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\VulkanDebug.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\VulkanDevice.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\VulkanFrameBuffer.hpp">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\VulkanInitializers.hpp">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\VulkanSwapChain.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\VulkanTexture.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\VulkanTools.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\VulkanUIOverlay.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\VulkanglTFModel.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\benchmark.hpp">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\camera.hpp">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\frustum.hpp">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\keycodes.hpp">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\threadpool.hpp">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\vulkanexamplebase.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\test\VulkanBase.h" />
+    <ClInclude Include="src\Cetus\Input\Input.h" />
+    <ClInclude Include="src\Cetus\Input\KeyCodes.h" />
+    <ClInclude Include="src\Cetus\Application.h" />
+    <ClInclude Include="src\Cetus\EntryPoint.h" />
+    <ClInclude Include="src\Cetus\Image.h" />
+    <ClInclude Include="src\Cetus\Layer.h" />
+    <ClInclude Include="src\Cetus\Random.h" />
+    <ClInclude Include="src\Cetus\Timer.h" />
+    <ClInclude Include="src\Cetus\ImGui\imgui_impl_vulkan.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\base\VulkanBuffer.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\VulkanDebug.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\VulkanDevice.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\VulkanSwapChain.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\VulkanTexture.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\VulkanTools.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\VulkanUIOverlay.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\VulkanglTFModel.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\vulkanexamplebase.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\ktx\checkheader.c" />
+    <ClCompile Include="src\base\ktx\filestream.c" />
+    <ClCompile Include="src\base\ktx\hashlist.c" />
+    <ClCompile Include="src\base\ktx\memstream.c" />
+    <ClCompile Include="src\base\ktx\swap.c" />
+    <ClCompile Include="src\base\ktx\texture.c" />
+    <ClCompile Include="src\base\test\VulkanBase.cpp" />
+    <ClCompile Include="src\Cetus\ImGui\ImGuiBuild.cpp" />
+    <ClCompile Include="src\Cetus\Input\Input.cpp" />
+    <ClCompile Include="src\Cetus\Application.cpp" />
+    <ClCompile Include="src\Cetus\Image.cpp" />
+    <ClCompile Include="src\Cetus\Random.cpp" />
+    <ClCompile Include="src\Cetus\ImGui\imgui_impl_vulkan.cpp" />
+  </ItemGroup>
+</Project>
